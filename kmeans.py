@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+%matplotlib inline # run in jupyter notebook
 
 ### Initialization
 
@@ -21,6 +22,8 @@ for i in centroids.keys():
     plt.scatter(*centroids[i], color=colmap[i])
 plt.xlim(0, 80)
 plt.ylim(0, 80)
+plt.show() #show the plot
+
 
 ### Assignment Stage
 
@@ -48,6 +51,7 @@ for i in centroids.keys():
     plt.scatter(*centroids[i], color=colmap[i])
 plt.xlim(0, 80)
 plt.ylim(0, 80)
+plt.show()
 
 
 ### Update Stage
@@ -77,7 +81,8 @@ for i in old_centroids.keys():
     dx = (centroids[i][0] - old_centroids[i][0]) * 0.75
     dy = (centroids[i][1] - old_centroids[i][1]) * 0.75
     ax.arrow(old_x, old_y, dx, dy, head_width=2, head_length=3, fc=colmap[i], ec=colmap[i])
-
+plt.show()
+    
 
 ### Repeat Assigment Stage
 
@@ -90,6 +95,8 @@ for i in centroids.keys():
     plt.scatter(*centroids[i], color=colmap[i])
 plt.xlim(0, 80)
 plt.ylim(0, 80)
+plt.show()
+
 
 ### Continue until all assigned centroids no longer move
 
